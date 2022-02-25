@@ -9,6 +9,7 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'nunito-bold',
     fontSize: 18,
     color: '#333',
+    marginLeft: 10,
   },
   paragraph: {
     marginVertical: 8,
