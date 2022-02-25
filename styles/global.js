@@ -14,4 +14,7 @@ export const globalStyles = StyleSheet.create({
     marginVertical: 8,
     lineHeight: 20,
   },
+  button: {
+    backgroundColor: 'lightblue',
+  },
 });

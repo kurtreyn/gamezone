@@ -1,12 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, Text, View, Button } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../styles/global';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const pressHandler = () => {
+    navigation.navigate('ReviewDetails');
+    // COULD ALSO USE:
+    // navigation.push('ReviewDetails');
+  };
+
   return (
-    <View style={globalStyles.container}>
+    <SafeAreaView style={globalStyles.container}>
       <Text style={globalStyles.titleText}>Home screen</Text>
-    </View>
+      <Button title="GO TO REVIEW DETAILS" onPress={pressHandler} />
+    </SafeAreaView>
   );
 };
 
