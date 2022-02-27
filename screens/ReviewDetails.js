@@ -1,6 +1,6 @@
-import { Button, Text, View } from 'react-native';
+import { Image, Text, View, StyleSheet } from 'react-native';
 import React from 'react';
-import { globalStyles } from '../styles/global';
+import { globalStyles, images } from '../styles/global';
 import Card from '../shared/Card';
 
 const ReviewDetails = ({ route }) => {
@@ -20,9 +20,24 @@ const ReviewDetails = ({ route }) => {
         <Text>{body}</Text>
         <Text>{rating}</Text>
         {/* <Button title="BACK TO HOME SCREEN" onPress={pressHandler} /> */}
+        <View style={styles.rating}>
+          <Text>GameZone Rating: </Text>
+          <Image source={images.rating[rating]} />
+        </View>
       </Card>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  rating: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingTop: 16,
+    marginTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#bbb',
+  },
+});
 
 export default ReviewDetails;
