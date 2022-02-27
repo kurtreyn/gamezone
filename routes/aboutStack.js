@@ -14,7 +14,7 @@ export default function AboutStack() {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen
-        name="About"
+        name="About Screen"
         component={About}
         options={{ headerShown: false }}
       />

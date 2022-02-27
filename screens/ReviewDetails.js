@@ -1,6 +1,7 @@
 import { Button, Text, View } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../styles/global';
+import Card from '../shared/Card';
 
 const ReviewDetails = ({ route }) => {
   // const pressHandler = () => {
@@ -14,10 +15,12 @@ const ReviewDetails = ({ route }) => {
 
   return (
     <View style={globalStyles.container}>
-      <Text>{title}</Text>
-      <Text>{body}</Text>
-      <Text>{rating}</Text>
-      {/* <Button title="BACK TO HOME SCREEN" onPress={pressHandler} /> */}
+      <Card>
+        <Text>{title}</Text>
+        <Text>{body}</Text>
+        <Text>{rating}</Text>
+        {/* <Button title="BACK TO HOME SCREEN" onPress={pressHandler} /> */}
+      </Card>
     </View>
   );
 };

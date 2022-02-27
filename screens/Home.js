@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React, { useState } from 'react';
 import { globalStyles } from '../styles/global';
+import Card from '../shared/Card';
 
 const Home = ({ navigation }) => {
   // const pressHandler = () => {
@@ -41,7 +42,9 @@ const Home = ({ navigation }) => {
             // PASSING DATA BETWEEN SCREENS - STACK NAVIGATION
             onPress={() => navigation.navigate('ReviewDetails', item)}
           >
-            <Text style={globalStyles.titleText}>{item.title}</Text>
+            <Card>
+              <Text style={globalStyles.titleText}>{item.title}</Text>
+            </Card>
           </TouchableOpacity>
         )}
       />

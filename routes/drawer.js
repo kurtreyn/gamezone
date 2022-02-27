@@ -17,6 +17,7 @@ const RootDrawerNavigator = () => {
       <Drawer.Screen
         name="Home"
         component={HomeStack}
+        options={{ headerShown: false }}
         options={{ title: 'GameZone' }}
       />
       <Drawer.Screen name="About" component={AboutStack} />
